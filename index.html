@@ -1,12 +1,77 @@
 <!DOCTYPE html>
+<html lang="en">
 <html>
 <head>
-<title>Hello World Azure Template</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Insurance Risk Calculator</title>
+        <script src="index.js"></script>
+        <link rel="stylesheet" href="index.css">
 </head>
 <body>
-<h1>Azure Static Website Template</h1>
-<p>This page is a sample page for a “Hello World” Azure Static Website Template. The page contains an HTML validation warning. 
-Can you find and fix that warning? What about the curly quotes? Do they current work in all browsers? Can you fix the curly 
-quotes also? And what about proper indenting?</p>
+<h1>Health Insurance Risk Calculator</h1>
+<p>This application will calculate your risk profile for health insurance based on age, blood pressure, family history of disease, and your body-mass index. Please fill out the form with your information and press the "calculate" button to receive your results.</p>
+
+<main>
+<div>
+  <h3>Calculate your insurance risk:</h3>
+            <!--Creates the form -->
+    <div class="form-group">
+              <label for="inputage">Enter your age:</label>
+              <input type="age" class="form-control" id="age" placeholder="Your age">
+    </div>
+            <br>
+            
+            <div class="form-group">
+              <label for="selectBP">Select Your Blood Pressures:</label>
+              <select class="form-control" id="selectBP">
+                <option>Normal</option>
+                <option>Elevated</option>
+                <option>Stage 1</option>
+                <option>Stage 2</option>
+                <option>Crisis</option>
+              </select>
+            </div>
+    <img src="chart.png" width="500" height="269" alt=""/> <br>
+            <!-- Check Boxes for Diseses -->
+            <div class="form-check form-check-inline">
+                <label for="form-check-input">Select Family Diseases if any:</label>
+                <br>
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="">
+                <label class="form-check-label" for="inlineCheckbox1">Diabetes</label>
+    </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="">
+                <label class="form-check-label" for="inlineCheckbox2">Cancer</label>
+              </div>
+    <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="">
+                <label class="form-check-label" for="inlineCheckbox3">Alzheimers</label>
+              </div>
+
+              
+              <!--Calculating the BMI and results-->
+        
+        <h3>Body Mass Index:</h3>
+        <img src="bmi.png" width="300" height="132" alt=""/>
+<label for="inputweight"><br>
+  Enter your body weight in pounds:</label>
+        <input type="weight" class="form-control" id="weight"/>
+        lb
+        <br>
+        <label>Enter your height in feet/inches:</label>
+    <input name="heightFeet" id="heightFeet"/>ft    
+    <input name="heightInches" id="heightInches"/>in
+        <br>
+        <input onclick="calculations()" type="submit" value="Calculate" class="button" />
+        <br><br>
+        <label>Results:</label> 
+        <input type="text" id="totalScore" disabled>
+        <br>
+        <h2>Created By: TitanicSwimTeam</h2>
+        
+  </div>
+</main>
+
 </body>
 </html>

@@ -1,0 +1,20 @@
+.title{
+    text-align: center;
+    }
+    
+    body {
+        background-color: rgb(250, 246, 230);
+    }
+    
+    h1,h2 {
+        padding: 60px;
+        text-align: center;
+        background: #a57b12;
+        color: white;
+        font-size: 30px;
+      }
+    
+    p {
+        font-size: 21px;
+        text-align: center;
+    }
